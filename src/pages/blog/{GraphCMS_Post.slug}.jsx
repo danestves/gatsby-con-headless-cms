@@ -8,11 +8,8 @@ import { Layout, Seo } from "../../components"
 import { formatDate } from "../../utils"
 
 const PostLayout = ({ data: { graphCmsPost: post, cover } }) => {
-  const shareImage = post.seo.image
-    ? post.seo.image.url
-    : post.cover.url || null
+  const shareImage = post.cover.url
 
-  console.log(post)
   return (
     <Layout>
       <Seo
